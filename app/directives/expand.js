@@ -3,9 +3,12 @@
 function expandOnFocus() {
   return {
     restrict: "A",
-    link: ($element) => {
+    link: ($scope, $element, $attrs) => {
       $element.on("focus", function() {
-        $element.css("")
+        $element.css("padding", "20px");
+      });
+      $element.on("blur", function() {
+        $element.css("padding", "10px");
       });
     }
   }

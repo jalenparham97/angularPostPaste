@@ -6,15 +6,14 @@ const socialPost = {
     <section>
       <div class="header">
         <h1 class="header--title">PostPaste</h1>
+        <button class="header--btn" ng-click="$ctrl.form = true">New Post</button>
       </div>
-
-      <div>
-       <button class="new--button" ng-click="$ctrl.form = true">New Post</button>
-      </div>
-
+      
       <post-form on-submit="$ctrl.pastePost(newPost);" ng-if="$ctrl.form === true"></post-form>
 
-      <post ng-repeat="post in $ctrl.postList track by $index" post="post" index="$index" delete-post="$ctrl.deletePost(index)"></post>
+      <section class="postList__container">
+        <post ng-repeat="post in $ctrl.postList track by $index" post="post" index="$index" delete-post="$ctrl.deletePost(index)"></post>
+      </section>
     </seciton>
   `, 
 

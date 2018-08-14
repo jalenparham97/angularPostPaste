@@ -1,0 +1,14 @@
+{
+  "name": "angularpostpaste",
+  "version": "1.0.0",
+  "description": "A social posts application",
+  "main": "index.js",
+  "scripts": {
+    "compile:scss": "node-sass scss/style.scss css/style.css -w"
+  },
+  "author": "Jalen Parham",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.9.3"
+  }
+}
